@@ -10,7 +10,7 @@ versionfolders = ['apache-maven', 'PortableGit']
 spigot_file = " "
 
 def serverBuild(ram):
-    
+
     curfiles = [f for f in os.listdir('.') if os.path.isfile(f)]
 
     for f in curfiles:
@@ -20,7 +20,7 @@ def serverBuild(ram):
     print('[+] Creating run.bat file')
     with open("run.bat", "w+") as bat_file:
         bat_file.write(r'java -jar -Xmx{}G -Xms1G {} nogui'.format(ram, spigot_file))
-    
+
     print('[*] Starting to build the server')
     #Starting to build the server
     os.system('run.bat')
@@ -71,7 +71,7 @@ def main(name, ram):
 
         remove()
         serverBuild(ram)
-        
+
 
 
 
