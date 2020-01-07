@@ -78,5 +78,4 @@ if __name__ == '__main__':
     name = input("Folder name: ")
     ram = input("Ram amount: ")
 
-    #main(name, ram)
-    serverBuild(ram)
+    main(name, ram)
